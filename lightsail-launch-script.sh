@@ -26,3 +26,7 @@ sudo rm /etc/nginx/sites-enabled/*
 sudo cp ~/nycrhps-2017-ops/nginx/sites-available/* /etc/nginx/sites-available;
 sudo ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/;
 sudo service nginx restart;
+
+
+#letsencrypt
+sudo apt-get install letsencrypt -y

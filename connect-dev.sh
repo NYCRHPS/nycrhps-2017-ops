@@ -1,1 +1,1 @@
-ssh -i ./LightsailDefaultPrivateKey.pem ubuntu@54.90.90.33;
+ssh -i ./LightsailDefaultPrivateKey.pem ubuntu@34.198.86.33;

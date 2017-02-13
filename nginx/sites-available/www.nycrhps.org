@@ -1,7 +1,11 @@
 server {
     listen 80;
+    listen 443 ssl;
 
     server_name www.nycrhps.org nycrhps.org www.nycrhps.com nycrhps.com;
+
+    ssl_certificate /etc/letsencrypt/live/www.nycrhps.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/www.nycrhps.org/privkey.pem;
 
     location / {
         proxy_pass http://127.0.0.1:8000;
@@ -10,5 +14,11 @@ server {
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
+    }
+
+    root /var/www/www.nycrhps.org;
+
+    location ~ /.well-known {
+        allow all;
     }
 }
