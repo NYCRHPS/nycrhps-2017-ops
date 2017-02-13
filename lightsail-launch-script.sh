@@ -9,16 +9,18 @@ sudo service mongod start;
 
 sudo npm install pm2 -g;
 
-cd ~/;
-git clone git@github.com:NYCRHPS/nycrhps-2017-ops.git;
-
 #copy ssh key
 #TODO
 
+cd ~/;
+git clone git@github.com:NYCRHPS/nycrhps-2017-ops.git;
+
+cd ~/;
 git clone git@github.com:Tidwell/nycrhps-2017.git;
 cd nycrhps-2017;
 npm install;
 
+cd nycrhps-2017-ops;
 sudo pm2 start pm2-apps.config.js
 sudo pm2 startup
 

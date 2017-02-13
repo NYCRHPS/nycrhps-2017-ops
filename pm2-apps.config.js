@@ -2,7 +2,7 @@ module.exports = {
   apps : [{
     name        : "website",
     script      : "index.js",
-    cwd			: "~/nycrhps-2017/",
+    cwd			: "/home/ubuntu/nycrhps-2017/",
     watch       : true,
     env: {
       "NODE_ENV": "development",
