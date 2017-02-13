@@ -10,5 +10,16 @@ module.exports = {
     env_production : {
        "NODE_ENV": "production"
     }
+  }, {
+    name        : "admin",
+    script      : "index.js",
+    cwd			: "/home/ubuntu/nycrhps-2017-admin/",
+    watch       : true,
+    env: {
+      "NODE_ENV": "development",
+    },
+    env_production : {
+       "NODE_ENV": "production"
+    }
   }]
 };
