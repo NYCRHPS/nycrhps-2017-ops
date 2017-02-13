@@ -1,4 +1,5 @@
 #manually symlink the sites that the box should actually have in sites-enabled
+#sudo ln ../sites-available/dev.nycrhps.com dev.nycrhps.com
 #
 cd ~/;
 git clone git@github.com:Tidwell/nycrhps-2017.git;
