@@ -16,4 +16,5 @@ npm install;
 cd ~/nycrhps-2017-ops
 sudo pm2 start pm2-apps.config.js
 sudo pm2 startup
+sudo systemctl restart nginx;
 

@@ -1,16 +1,11 @@
 #install node
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -;
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -;
 sudo apt-get install -y nodejs;
 
 #install nginx
-sudo apt-get install nginx;
+sudo apt-get install -y nginx;
 sudo ufw allow 'Nginx HTTP';
 sudo systemctl enable nginx;
-
-#setup nginx config files
-sudo cp ~/nycrhps-2017-ops/nginx/sites-available/* /etc/nginx/sites-available;
-sudo ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/;
-sudo service nginx restart;
 
 #install mongodb
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6;
@@ -18,15 +13,16 @@ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb
 sudo apt-get update;
 sudo apt-get install -y mongodb-org;
 sudo service mongod start;
+systemctl enable mongod.service
 
 #install pm2
 sudo npm install pm2 -g;
 
 cd ~/;
-git clone git@github.com:NYCRHPS/nycrhps-2017-ops.git;
+git clone https://github.com/NYCRHPS/nycrhps-2017-ops.git;
 
-#TODO-copy ssh key
-
-#run the installer script
-cd nycrhps-2017-ops;
-./clone-install-app.sh;
+#setup nginx config files
+sudo rm /etc/nginx/sites-enabled/*
+sudo cp ~/nycrhps-2017-ops/nginx/sites-available/* /etc/nginx/sites-available;
+sudo ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/;
+sudo service nginx restart;
