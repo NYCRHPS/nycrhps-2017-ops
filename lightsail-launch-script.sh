@@ -13,7 +13,7 @@ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb
 sudo apt-get update;
 sudo apt-get install -y mongodb-org;
 sudo service mongod start;
-systemctl enable mongod.service
+sudo systemctl enable mongod.service
 
 #install pm2
 sudo npm install pm2 -g;
