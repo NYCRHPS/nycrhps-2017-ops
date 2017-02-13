@@ -7,7 +7,10 @@ sudo apt-get install nginx;
 sudo ufw allow 'Nginx HTTP';
 sudo systemctl enable nginx;
 
-sudo cp ~/nycrhps-2017-ops/nginx/sites-available/* /etc/nginx/sites-available
+#setup nginx config files
+sudo cp ~/nycrhps-2017-ops/nginx/sites-available/* /etc/nginx/sites-available;
+sudo ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/;
+sudo service nginx restart;
 
 #install mongodb
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6;
