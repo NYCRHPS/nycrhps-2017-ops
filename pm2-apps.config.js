@@ -21,5 +21,16 @@ module.exports = {
     env_production : {
        "NODE_ENV": "production"
     }
+  }, {
+    name        : "casting",
+    script      : "index.js",
+    cwd			: "/home/ubuntu/nycrhps-casting/",
+    watch       : true,
+    env: {
+      "NODE_ENV": "development",
+    },
+    env_production : {
+       "NODE_ENV": "production"
+    }
   }]
 };
