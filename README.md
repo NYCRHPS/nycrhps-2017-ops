@@ -11,20 +11,24 @@ When creating a new instance in lightsail, paste the contents of `./lightsail-la
 
 After it launches, THE NEXT STEPS MUST BE DONE MANUALLY
 
-#ssh into the box and run
+- ssh into the box and run
 
 ``$ ssh-keygen -t rsa -b 4096 -C "directors@nycrhps.org"``
+
 ``cat ~/.ssh/id_rsa.pub``
 
 - put into github ``https://github.com/settings/keys``
 
-#run the installer script
+- run the installer script
+
 ``$ cd nycrhps-2017-ops;``
+
 ``$ ./clone-install-app.sh;``
 
-Add a static ip address to the instance.  This static IP will be needed to be entered into A/AAAA Records in the DNS setup with the Nameserver.
+- Add a static ip address to the instance.  This static IP will be needed to be entered into A/AAAA Records in the DNS setup with the Nameserver.
 
-After the nameserver changes propogate.  SSH into the box and create the ssl certs for the main website.
+- After the nameserver changes propogate.  SSH into the box and create the ssl certs for the main website.
 
 ``$ cd nycrhps-2017-ops``
+
 ``$ ./create-ssl-[dev|prod].sh``
