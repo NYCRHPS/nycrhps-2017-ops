@@ -15,7 +15,7 @@ After it launches, THE NEXT STEPS MUST BE DONE MANUALLY
 
 ``$ ssh-keygen -t rsa -b 4096 -C "directors@nycrhps.org"``
 
-``cat ~/.ssh/id_rsa.pub``
+``$ cat ~/.ssh/id_rsa.pub``
 
 - put into github ``https://github.com/settings/keys``
 

@@ -15,6 +15,9 @@ sudo apt-get install -y mongodb-org;
 sudo service mongod start;
 sudo systemctl enable mongod.service
 
+#install imagemagick
+sudo apt-get install imagemagick -y
+
 #install pm2
 sudo npm install pm2 -g;
 
