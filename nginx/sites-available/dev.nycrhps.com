@@ -2,7 +2,7 @@ server {
     listen 80;
     listen 443 ssl;
 
-    server_name dev.nycrhps.com;
+    server_name dev.nycrhps.com dev.nycrhps.org;
 
     ssl_certificate /etc/letsencrypt/live/dev.nycrhps.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/dev.nycrhps.com/privkey.pem;
