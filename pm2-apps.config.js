@@ -15,6 +15,7 @@ module.exports = {
 		script: "index.js",
 		cwd: "/home/ubuntu/nycrhps-2017-admin/",
 		watch: true,
+		ignore_watch : ["node_modules", "tmp"],
 		env: {
 			"NODE_ENV": "development",
 		},

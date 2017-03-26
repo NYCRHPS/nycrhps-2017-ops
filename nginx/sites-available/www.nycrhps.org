@@ -2,7 +2,7 @@ server {
     listen 80;
     listen 443 ssl;
 
-    server_name www.nycrhps.org nycrhps.org www.nycrhps.com nycrhps.com;
+    server_name www.nycrhps.org nycrhps.org www.nycrhps.com nycrhps.com stage.nycrhps.com stage.nycrhps.org;
 
     ssl_certificate /etc/letsencrypt/live/www.nycrhps.org/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/www.nycrhps.org/privkey.pem;
