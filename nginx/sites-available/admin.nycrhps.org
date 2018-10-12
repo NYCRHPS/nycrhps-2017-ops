@@ -1,7 +1,11 @@
 server {
     listen 80;
+    listen 443 ssl;
 
     server_name admin.nycrhps.org admin.nycrhps.com stage-admin.nycrhps.com stage-admin.nycrhps.org;
+
+    ssl_certificate /etc/letsencrypt/live/admin.nycrhps.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/admin.nycrhps.org/privkey.pem;
 
     location / {
         proxy_pass http://127.0.0.1:8001;
@@ -22,5 +26,11 @@ server {
         proxy_buffers              4 32k;
         proxy_busy_buffers_size    64k;
         proxy_temp_file_write_size 64k;
+    }
+
+    root /var/www/admin.nycrhps.org;
+
+    location ~ /.well-known {
+        allow all;
     }
 }
