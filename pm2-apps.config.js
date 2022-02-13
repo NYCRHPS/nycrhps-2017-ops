@@ -33,5 +33,16 @@ module.exports = {
 		env_production: {
 			"NODE_ENV": "production"
 		}
+	}, {
+		name: "discord-bot",
+		script: "index.js",
+		cwd: "/home/ubuntu/NYCRHPS-discord-bot/",
+		watch: true,
+		env: {
+			"NODE_ENV": "development",
+		},
+		env_production: {
+			"NODE_ENV": "production"
+		}
 	}]
 };
