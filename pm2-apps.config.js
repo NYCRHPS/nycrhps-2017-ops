@@ -9,7 +9,8 @@ module.exports = {
 		},
 		env_production: {
 			"NODE_ENV": "production"
-		}
+		},
+		interpreter : 'node@6.10.0'
 	}, {
 		name: "admin",
 		script: "index.js",
@@ -21,7 +22,8 @@ module.exports = {
 		},
 		env_production: {
 			"NODE_ENV": "production"
-		}
+		},
+		interpreter : 'node@6.10.0'
 	}, {
 		name: "casting",
 		script: "index.js",
@@ -32,7 +34,8 @@ module.exports = {
 		},
 		env_production: {
 			"NODE_ENV": "production"
-		}
+		},
+		interpreter : 'node@6.10.0'
 	}, {
 		name: "discord-bot",
 		script: "index.js",
@@ -43,6 +46,7 @@ module.exports = {
 		},
 		env_production: {
 			"NODE_ENV": "production"
-		}
+		},
+		interpreter : 'node@16.13.2'
 	}]
 };
